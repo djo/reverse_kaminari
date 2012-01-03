@@ -1,4 +1,10 @@
 ReverseKaminari::Application.routes.draw do
+
+  resources :cities, :only => [:index, :create], :path => '/' do
+    get '' => 'cities#index'
+    get 'page/:page', :on => :collection, :action => :index
+  end
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

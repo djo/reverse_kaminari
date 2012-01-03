@@ -45,6 +45,10 @@ GEM
     hike (1.2.1)
     i18n (0.6.0)
     json (1.6.4)
+    kaminari (0.13.0)
+      actionpack (>= 3.0.0)
+      activesupport (>= 3.0.0)
+      railties (>= 3.0.0)
     mail (2.3.0)
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
@@ -122,6 +126,7 @@ PLATFORMS
 
 DEPENDENCIES
   fuubar (~> 0.0.5)
+  kaminari (~> 0.13.0)
   pg (~> 0.12.1)
   rails (= 3.1.0)
   rspec-rails (~> 2.6)

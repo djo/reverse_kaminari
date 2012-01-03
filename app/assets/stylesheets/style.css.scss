@@ -1,0 +1,56 @@
+body {
+  background-color: #4B7399;
+  font-family: Verdana, Helvetica, Arial;
+  font-size: 14px;
+}
+
+a {
+  color: #0000FF;
+}
+
+h2 {
+  font-family: Arial;
+  margin-bottom: 0.2em;
+}
+
+#wrapper {
+  width: 75%;
+  margin: 0 auto;
+}
+
+#content {
+  background-color: #FFF;
+  padding: 25px 40px;
+  border: solid 1px black;
+  margin-top: 30px;  
+}
+
+header, footer {
+  text-align: right;
+}
+
+footer {
+  margin: 0.7em 0 1em;
+  font-size: 0.9em;
+}
+
+.flash {
+  padding: 5px 8px;
+  margin: 10px 0;
+  
+  &.notice {
+    background-color: #CFC;
+    border: solid 1px #6C6;
+  }
+
+  &.alert {
+    background-color: #FCC;
+    border: solid 1px #C66;
+  }
+  
+}
+
+#cities_info {
+  color: #999;
+  font-size: 1em;
+}

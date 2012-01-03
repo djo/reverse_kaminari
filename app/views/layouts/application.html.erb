@@ -1,14 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ReverseKaminari</title>
-  <%= stylesheet_link_tag    "application" %>
-  <%= javascript_include_tag "application" %>
+  <title>An example of the reverse pagination</title>
+  <%= stylesheet_link_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+<div id="wrapper">
+
+  <div id="content">
+
+    <header>
+      <%= link_to 'Github', 'https://github.com/Djo/reverse_kaminari', :target => '_blank' %>
+    </header>
+
+    <% [:notice, :alert].each do |type| %>
+      <% unless flash[type].blank? %>
+        <div class="flash <%= type %>"><%= flash[type] %></div>
+      <% end %>
+    <% end %>
+
+    <%= yield %>
+
+  </div>
+
+  <footer>© 2012 An example of the reverse pagination by <%= link_to 'Andrew Djoga', 'http://andrewdjoga.com' %></footer>
+
+</div>
 
 </body>
 </html>

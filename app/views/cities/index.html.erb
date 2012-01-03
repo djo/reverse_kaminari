@@ -1,0 +1,18 @@
+<%= form_for City.new do |f| %>
+  <%= f.text_field :name, :placeholder => "New City" %>
+  <%= f.submit 'Add' %>
+<% end %>
+
+<h2>Cities</h2>
+
+<div id="cities_info">
+  <%= @cities.offset_value + @cities.length %>..<%= @cities.offset_value + 1 %>
+</div>
+
+<ul>
+  <% @cities.each do |city| %>
+    <li><%= city.name %></li>
+  <% end %>
+</ul>
+
+<%= paginate @cities %>
