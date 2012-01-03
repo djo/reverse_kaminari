@@ -1,0 +1,23 @@
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: kaminari_test
+  pool: 5
+  username: andrew
+  password:
+
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: kaminari_dev
+  pool: 5
+  username: andrew
+  password:
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: kaminari_pro
+  pool: 5
+  username: andrew
+  password:
