@@ -6,7 +6,7 @@
 <h2>Cities</h2>
 
 <div id="cities_info">
-  <%= @cities.offset_value + @cities.length %>..<%= @cities.offset_value + 1 %>
+  <%= @cities.offset_value + 1 %>..<%= @cities.offset_value + @cities.length %>
 </div>
 
 <ul>
@@ -15,4 +15,4 @@
   <% end %>
 </ul>
 
-<%= paginate @cities %>
+<%= paginate @cities, :num_pages => @num_pages %>
