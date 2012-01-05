@@ -19,16 +19,17 @@ class CitiesController < ApplicationController
   private
 
   def prepare_cities(scope)
-    per_page = City.default_per_page
+    @per_page = City.default_per_page
     total_count = scope.count
-    rest_count = total_count > per_page ? (total_count % per_page) : 0
-    current_page = (params[:page] || 1).to_i
-    @num_pages = total_count > per_page ? (total_count / per_page) : 1
+    rest_count = total_count > @per_page ? (total_count % @per_page) : 0
+    @num_pages = total_count > @per_page ? (total_count / @per_page) : 1
 
-    if current_page == 1
-      scope.page(1).per(per_page + rest_count)
+    if params[:page]
+      offset = params[:page].sub(/-.*/, '').to_i
+      current_page = @num_pages - (offset - 1) / @per_page
+      scope.page(current_page).per(@per_page).padding(rest_count)
     else
-      scope.page(current_page).per(per_page).padding(rest_count)
+      scope.page(1).per(@per_page + rest_count)
     end
   end
 
