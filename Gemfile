@@ -9,6 +9,7 @@ group :test, :development do
   gem "fuubar", "~> 0.0.5"
   gem "rspec-rails", "~> 2.6"
   gem 'turn', :require => false
+  gem "capybara", "~> 1.1.2"
 end
 
 group :assets do
