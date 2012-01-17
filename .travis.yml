@@ -1,3 +1,8 @@
 rvm:
   - 1.9.2
-script: "bundle exec rake db:schema:load; bundle exec rake"
+before_script:
+  - "psql -c 'create database kaminari_test;' -U postgres"
+script: 
+  - "bundle exec rake db:schema:load" 
+  - "bundle exec rake"
+
