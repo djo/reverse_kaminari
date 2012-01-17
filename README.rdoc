@@ -31,9 +31,9 @@ I decided having a pagination bar as crumbs in descending order is not user-frie
 
 == How it works
 
-I tried to implement it without extending/hacking kaminari. See {specs}[https://github.com/Djo/reverse_kaminari/tree/master/spec/requests/cities_spec.rb/].
+I tried to implement it without extending/hacking kaminari. See {specs}[https://github.com/Djo/reverse_kaminari/blob/master/spec/controllers/cities_controller_spec.rb] and  {requests}[https://github.com/Djo/reverse_kaminari/tree/master/spec/requests/cities_spec.rb/].
 
 == Links
 
-  * {Demo}[http://reverse-kaminari.heroku.com/]
-  * {will_paginate case}[http://reverse-kaminari.heroku.com/]
+* {Demo}[http://reverse-kaminari.heroku.com/]
+* {Reversing will_paginate case}[https://github.com/Djo/reverse_will_paginate]
