@@ -1,0 +1,39 @@
+= An example of the reverse pagination
+{<img src="https://secure.travis-ci.org/Djo/reverse_kaminari.png" />}[http://travis-ci.org/Djo/reverse_kaminari]
+
+The example shows how to implement pagination with {kaminari}[https://github.com/amatsuda/kaminari] if you need unchanged pages with descending order.
+To keep immutable content in the pages can be by SEO reasons for example. See {demo}[http://reverse-kaminari.heroku.com/].
+
+== How it looks
+
+For example you should display 3 posts per page in the descending order. And you want to keep unchanged pages for google and friends for indexing.
+In this case you can have the start page (the last page of the records in the your db) with dynamic limit:
+
+9 Posts will consist of 3 pages:
+
+  9..7, 6..4, 3..1
+
+10 Posts will consist of 3 pages:
+
+  10..7, 6..4, 3..1
+
+11 Posts will consist of 3 pages:
+
+  11..7, 6..4, 3..1
+
+And 12 Posts will consist of 4 pages:
+
+  12..10, 9..7, 6..4, 3..1
+
+As you see you will always have unchanged pages expect the start page.
+
+I decided having a pagination bar as crumbs in descending order is not user-friendly. So I added the regular pagination bar in ascending order with offsets in URLs, see {demo}[http://reverse-kaminari.heroku.com/].
+
+== How it works
+
+I tried to implement it without extending/hacking kaminari. See {specs}[https://github.com/Djo/reverse_kaminari/tree/master/spec/requests/cities_spec.rb/].
+
+== Links
+
+  * {Demo}[http://reverse-kaminari.heroku.com/]
+  * {will_paginate case}[http://reverse-kaminari.heroku.com/]
