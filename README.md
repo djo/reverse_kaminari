@@ -1,7 +1,7 @@
 # Example of the reverse pagination
 [![Build Status](https://secure.travis-ci.org/Djo/reverse_kaminari.png "Build Status")](http://travis-ci.org/Djo/reverse_kaminari)
 
-Many sites with pagination have a SEO problem. As you add new content to the site, more pages are created and the older content moves from page 1 to page 2 and so on. This produces issues related to things like page indexing and UX. This example shows you how to implement reverse pagination with [kaminari](https://github.com/amatsuda/kaminari) and float limit for the first (index) page. See [demo](http://reverse-kaminari.heroku.com).
+With the standard pagination strategy on adding a new content you will have situation when the older content moves from page #1 to page #2 and so on. It leads to issues with SEO, indexing and UX. This example shows you how to implement reverse pagination with [kaminari](https://github.com/amatsuda/kaminari) and floating limit for the first (index) page to 
 
 ## How it looks
 
@@ -34,11 +34,9 @@ And posts will produce 4 pages with 3 posts on the index:
 
 ## How it works
 
-To get this behaviour you need to implement the float limit for the first page.
+To get this behaviour you need to implement the floating limit for the first page.
 
-I decided that having the pagination bar in descending order is not user-friendly. So I added the regular pagination bar in ascending order and offsets in URLs. Example of the pagination bar in descending order with page numbers in routes you can find in the [example of the reverse pagination with will_paginate](https://github.com/Djo/reverse_will_paginate).
+I decided that having the pagination bar in descending order is not user-friendly. So I added the regular pagination bar in ascending order and offsets in URLs. Example of the pagination bar in descending order with page numbers in routes you can find in the [reverse pagination with will_paginate](https://github.com/Djo/reverse_will_paginate).
 
-## Links
+Also look at [https://github.com/Djo/reverse_will_paginate](https://github.com/Djo/reverse_will_paginate).
 
-* [Demo](http://reverse-kaminari.heroku.com)
-* [Example of the reverse pagination with will_paginate](https://github.com/Djo/reverse_will_paginate)
